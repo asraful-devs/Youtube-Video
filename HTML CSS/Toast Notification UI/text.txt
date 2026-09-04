@@ -1,0 +1,22 @@
+title : Toast Notification UI
+
+✕
+
+✓
+Success
+Your changes have been saved successfully.
+
+
+✕
+Error
+Something went wrong. Please try again.
+
+
+!
+Warning
+Your session will expire in 5 minutes.
+
+
+i
+Info
+A new update is available for download.
