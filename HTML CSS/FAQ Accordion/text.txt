@@ -1,0 +1,19 @@
+title : FAQ Accordion
+
+header : Frequently Asked Questions
+
+Q : What is included in the free plan?
+
+A : The free plan includes basic features with limited usage. You can upgrade anytime to unlock premium tools and higher limits.
+
+Q : Can I cancel my subscription anytime?
+
+A : Yes, you can cancel your subscription at any time from your account settings. No hidden fees or cancellation charges apply.
+
+Q : Do you offer customer support?
+
+A : Yes, our support team is available 24/7 via email and live chat to help you with any questions or issues.
+
+Q : Is my payment information secure?
+
+A : Absolutely. All payments are processed through secure, encrypted channels and we never store your card details on our servers.
