@@ -1,0 +1,18 @@
+title : Loading Spinner Collection
+
+
+Spinning Ring
+
+Bouncing Dots
+
+Pulse Circle
+
+Growing Bars
+
+Dual Ring
+
+Square Rotate
+
+Fading Dots Circle
+
+Sliding Progress Bar

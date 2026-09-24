@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #1a1a2e;
+    border: 1px solid #2e2e45;
+    border-radius: 16px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-height: 100px;
+}
+
+.label {
+    color: #9a9ab0;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.ring {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #2e2e45;
+    border-top: 5px solid #ff5c8a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dots span {
+    width: 14px;
+    height: 14px;
+    background-color: #ffd60a;
+    border-radius: 50%;
+    animation: bounce 0.6s ease-in-out infinite;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+.dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+}
+
+.pulse {
+    width: 50px;
+    height: 50px;
+    background-color: #4cc9f0;
+    border-radius: 50%;
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
+.bars {
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+    height: 50px;
+}
+
+.bars span {
+    width: 8px;
+    height: 20px;
+    background-color: #7b2ff7;
+    border-radius: 4px;
+    animation: grow 1s ease-in-out infinite;
+}
+
+.bars span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.bars span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.bars span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.bars span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes grow {
+    0%,
+    100% {
+        height: 20px;
+    }
+    50% {
+        height: 50px;
+    }
+}
+
+.dual-ring {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #06d6a0;
+    border-bottom-color: #06d6a0;
+    animation: spin 1.2s linear infinite;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    background-color: #ff8500;
+    border-radius: 6px;
+    animation: squareSpin 1.4s ease-in-out infinite;
+}
+
+@keyframes squareSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.7);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.circle-dots {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-dots span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ff5c8a;
+    border-radius: 50%;
+    animation: fade 1.2s linear infinite;
+}
+
+.circle-dots span:nth-child(1) {
+    top: 0;
+    left: 21px;
+    animation-delay: 0s;
+}
+.circle-dots span:nth-child(2) {
+    top: 8px;
+    left: 36px;
+    animation-delay: 0.15s;
+}
+.circle-dots span:nth-child(3) {
+    top: 21px;
+    left: 42px;
+    animation-delay: 0.3s;
+}
+.circle-dots span:nth-child(4) {
+    top: 34px;
+    left: 36px;
+    animation-delay: 0.45s;
+}
+.circle-dots span:nth-child(5) {
+    top: 42px;
+    left: 21px;
+    animation-delay: 0.6s;
+}
+.circle-dots span:nth-child(6) {
+    top: 34px;
+    left: 6px;
+    animation-delay: 0.75s;
+}
+.circle-dots span:nth-child(7) {
+    top: 21px;
+    left: 0px;
+    animation-delay: 0.9s;
+}
+.circle-dots span:nth-child(8) {
+    top: 8px;
+    left: 6px;
+    animation-delay: 1.05s;
+}
+
+@keyframes fade {
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.progress-track {
+    width: 100%;
+    max-width: 160px;
+    height: 10px;
+    background-color: #2e2e45;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 40%;
+    height: 100%;
+    background-color: #4cc9f0;
+    border-radius: 10px;
+    animation: slide 1.4s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: -40%;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
