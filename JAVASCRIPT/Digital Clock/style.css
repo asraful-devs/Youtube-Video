@@ -1,0 +1,132 @@
+/* font-family: "Work Sans", sans-serif; */
+
+/* font-family: "Share Tech Mono", monospace; */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #12141c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Work Sans', sans-serif;
+    color: #8891a5;
+    padding-top: max(24px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(24px, env(safe-area-inset-top, 0px));
+}
+
+.clock-card {
+    background-color: #1b1f2b;
+    border: 1px solid #262c3c;
+    border-radius: 22px;
+    padding: 44px 52px 36px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.greeting {
+    font-size: 15px;
+    font-weight: 500;
+    color: #8891a5;
+    margin: 0 0 18px;
+}
+
+.time {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: clamp(48px, 12vw, 68px);
+    color: #ffb454;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 18px rgba(255, 180, 84, 0.35);
+    animation: breathe 4s ease-in-out infinite;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+}
+
+.time .colon {
+    transition: opacity 0.15s ease;
+}
+
+.time .colon.dim {
+    opacity: 0.18;
+}
+
+.meridiem {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.32em;
+    font-weight: 600;
+    color: #8891a5;
+    margin-left: 10px;
+    align-self: center;
+}
+
+@keyframes breathe {
+    0%,
+    100% {
+        text-shadow: 0 0 18px rgba(255, 180, 84, 0.35);
+    }
+    50% {
+        text-shadow: 0 0 26px rgba(255, 180, 84, 0.55);
+    }
+}
+
+.date {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #8891a5;
+    font-weight: 500;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background-color: #262c3c;
+    margin: 24px auto;
+}
+
+.format-toggle {
+    background-color: transparent;
+    border: 1px solid #262c3c;
+    color: #5c6478;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.format-toggle:hover {
+    border-color: #7a5a2c;
+    color: #ffb454;
+}
+
+.format-toggle:focus-visible {
+    outline: 2px solid #ffb454;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion) {
+    .time {
+        animation: none;
+    }
+    .time .colon {
+        transition: none;
+    }
+}
